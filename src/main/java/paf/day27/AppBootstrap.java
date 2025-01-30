@@ -23,7 +23,7 @@ public class AppBootstrap implements CommandLineRunner {
     @Autowired
 	private CommentsRepo commentsRepo;
     
-    // --load=mongoDB_data/comments.json
+    // mvn clean spring-boot:run -D spring-boot.run.arguments="--load=mongoDB_data/comments.json"
     @Override
     public void run(String... args) throws Exception {
 		if(args.length > 0 && args[0].startsWith(Constants.CLI_PREFIX_LOAD))
